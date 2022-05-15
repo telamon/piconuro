@@ -94,7 +94,7 @@ function when (promise) {
  * Debug neuron, logs all signals
  */
 let __nfoCtr = 0
-const __pal = Array.from(new Array(8)).map((_, bg) => Array.from(new Array(8)).map((_, fg) => `\x1b[0;${30 + fg};${40 + bg}m`))
+// const __pal = Array.from(new Array(8)).map((_, bg) => Array.from(new Array(8)).map((_, fg) => `\x1b[0;${30 + fg};${40 + bg}m`))
 module.exports.V = 1 // VERBOSITY level
 function nfo (neuron, name) {
   if (!module.exports.V) return neuron // Completely bypass NFO when V is zero
