@@ -1,0 +1,26 @@
+{
+  "name": "piconuro",
+  "version": "0.1.0",
+  "description": "Pure functional reactive-store pattern for minimalists",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "tape test.js",
+    "debug": "node inspect $(npm bin)/tape test.js",
+    "prepublishOnly": "standard && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/telamon/piconuro"
+  },
+  "author": "Tony Ivanov",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/telamon/piconuro"
+  },
+  "homepage": "https://github.com/telamon/piconuro",
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "tape": "^5.5.3"
+  }
+}
