@@ -1,6 +1,14 @@
 [`pure | 📦`](https://github.com/telamon/create-pure)
 [`code style | standard`](https://standardjs.com/)
-# piconuro
+
+```
+╒═════─══─═─═─═──┐
+│██▀▌ ○ ▐█▀ ▐▀▀▌ │
+│██▀ ▄█ ██▄ █▄▄█ │
+├─┬──────────────┘
+│ └ █ NURO █│
+└────── ─ ─  ─  ─
+```
 
 > A functional approach to the reactive-store pattern
 > delivering indiscriminate minimalism.
