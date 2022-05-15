@@ -5,7 +5,7 @@
 > A functional approach to the reactive-store pattern
 > delivering indiscriminate minimalism.
 
-Nuro let's you build [https://en.wikipedia.org/wiki/Reactive_programming](reactive) pathways using only functions.
+Nuro let's you build (reactive)[https://en.wikipedia.org/wiki/Reactive_programming] pathways using only functions.
 
 It's a part of [picostack](https://github.com/telamon/picostack) created
 to develop famework-agnostic app-kernels/blockends that can be easily
