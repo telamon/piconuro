@@ -39,6 +39,40 @@ const unsubscribe = $n(value => console.log(value))
 unsubscribe()
 ```
 
+#### With react:
+Add this custom hook to your app:
+```js
+import { useState, useEffect } from 'react'
+import { settle, get } from 'piconuro'
+
+// CustomHook
+export function useNuro ($n) {
+  const [value, set] = useState(get($n))
+  // ensures unsub on unmount
+  useEffect(() => settle($n)(v => set(v)), [set])
+  return value
+}
+```
+
+#### With svelte:
+Add this neuron to readable-store adapter to your app:
+```js
+// N(e)uro -> svelte adapter
+export function svlt (neuron, dbg) {
+  return readable(null, set =>
+    !dbg
+      ? neuron(set)
+      : nfo(neuron, dbg)(set)
+  )
+}
+```
+
+#### With Vanilla html/js
+
+```js
+$n(value => document.getElementById('value-div').innerHTML = value)
+```
+
 # API
 
 > We prepend all neurons with a `$`-sign to avoid confusing them with values.
