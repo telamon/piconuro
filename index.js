@@ -42,7 +42,7 @@ function memo (neuron) {
     else disconnect = neuron(spreadForward)
     return () => {
       synapses.delete(syn)
-      if (synapses.length) return
+      if (synapses.size) return
       if (disconnect) disconnect()
       disconnect = null
     }
@@ -310,6 +310,15 @@ function notEqual (a, b) {
     return b.length !== a.length ||
       !!a.find((o, i) => b[i] !== o)
   }
+  // Warning: date comparison gonna be removed,
+  // Use epoch numbers instead of date object in paths.
+  if (
+    a instanceof Date || b instanceof Date
+  ) {
+    return (a instanceof Date && a.getTime()) !==
+      (b instanceof Date && b.getTime())
+  }
+
   if (
     typeof a === 'object' &&
     typeof b === 'object' &&

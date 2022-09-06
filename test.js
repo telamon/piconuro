@@ -243,21 +243,20 @@ test('memo(): one to many', async t => {
   t.equal(res.product, 70)
 })
 
-// TODO: fix this, issue discovered during documentation *facepalm*
-test.skip('write(): should not ignore different date objects', t => {
+test('write(): should not ignore different date objects', async t => {
   const now = new Date()
   const a = new Date('1984-03-24')
   const b = new Date('1999-09-10')
 
   const [$x, setX] = write(now)
 
-  t.equal(get($x)?.getTime(), now.getTime())
+  t.equal(get($x)?.getTime(), now.getTime(), 'written')
 
   setX(a)
-  t.equal(get($x)?.getTime(), a.getTime())
+  t.equal(get($x)?.getTime(), a.getTime(), 'updated')
 
   setX(b)
-  t.equal(get($x)?.getTime(), b.getTime())
+  t.equal(get($x)?.getTime(), b.getTime(), 'updated again')
 })
 
 test.skip('memo(): having fun plotting a chart', async t => {
