@@ -1,6 +1,14 @@
 [`pure | 📦`](https://github.com/telamon/create-pure)
 [`code style | standard`](https://standardjs.com/)
-# piconuro
+
+```
+╒═════─══─═─═─═──┐
+│██▀▌ ○ ▐█▀ ▐▀▀▌ │
+│██▀ ▄█ ██▄ █▄▄█ │
+├─┬──────────────┘
+│ └ █ NURO █│
+└────── ─ ─  ─  ─
+```
 
 > A functional approach to the reactive-store pattern
 > delivering indiscriminate minimalism.
@@ -148,7 +156,7 @@ $comments => init(
  [], // Empty array as placeholder
  mute($postId, async id => {
   const resp = await fetch(`https://dinosaurTech/api/posts/${id}`)
-  return JSON.parse(resp.data)
+  return resp.json()
  })
 )
 
