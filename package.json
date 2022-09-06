@@ -1,6 +1,6 @@
 {
   "name": "piconuro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pure functional reactive-store pattern for minimalists",
   "main": "index.js",
   "scripts": {
