@@ -2,12 +2,9 @@
 [`code style | standard`](https://standardjs.com/)
 
 ```
-╒═════─══─═─═─═──┐
-│██▀▌ ○ ▐█▀ ▐▀▀▌ │
-│██▀ ▄█ ██▄ █▄▄█ │
-├─┬──────────────┘
-│ └ █ NURO █│
-└────── ─ ─  ─  ─
+._ o _ _  ._  _    .__  
+|_)|(_(_) | |(/_|_||(_) 
+|  nuro = neuron
 ```
 
 > A functional approach to the reactive-store pattern
@@ -15,9 +12,20 @@
 
 Nuro let's you build [reactive](https://en.wikipedia.org/wiki/Reactive_programming) pathways using functions.
 
-It's a part of [picostack](https://github.com/telamon/picostack) created
-to develop famework-agnostic app-kernels/blockends that can be easily
-unit-tested and run in both node and browser.
+The DSL is intentionally compressed/shortend to quickly
+cause naming clashes if used outside of an `store|brain|logic.js`
+
+- Your code will insta-spaghetti if doing it wrong.
+
+use:
+```js
+// brainf.js
+// Step1: create a proto-mess
+// Step2:
+export const niceCleanAPI = $iveRunOutOfNames_rogerCarrot84_crap
+// Step3: ensure test-coverage
+// Step4: cleaning duty, until tests pass!
+```
 
 Aside from having a smaller API it offers similar workflows as
 svelte/stores or react/useState but without dependencies.
